@@ -5,37 +5,27 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    
+    <link rel="stylesheet" href="assets/css/responsive.css">
   </head>
-
 <body>
-  
   <div class="grid-container">
-    <model-viewer class="a" 
-     src="assets/model/Aunt_anim_V13.glb"
-     ios-src="assets/model/Aunt_anim.reality"
-     ar ar-modes="webxr scene-viewer quick-look"
-     camera-controls 
-     camera-target
-     camera-orbit
-     poster="assets/image/loading4.gif" 
-     exposure="1"
-     quick-look-browsers="safari chrome" 
-     id="model-viewer"
-     ar-status="not-presenting" 
-     autoplay>
-    <input slot="ar-button" class="ar-button" value="submit" type="image" src="assets/image/ariconsiyah.png" width="30px" height="30px"> 
-    </model-viewer>
-
+    <model-viewer 
+    src="assets/model/Aunt_anim_V13.glb" 
+    ar ar-modes="webxr scene-viewer quick-look"
+    camera-controls 
+    environment-image="neutral" 
+    poster="assets/image/poster.webp" 
+    shadow-intensity="1" 
+    autoplay 
+    camera-orbit="180deg 75deg auto"
+    >
+    <input slot="ar-button" class="ar-button" value="submit" type="image" src="/assets/image/ariconsiyah.png" width="30px" height="30px"> 
+  </model-viewer>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="https://unpkg.com/intersection-observer/intersection-observer.js"></script>
     <script src="https://unpkg.com/resize-observer-polyfill/dist/ResizeObserver.js"></script>
     <script src="https://unpkg.com/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
     <script src="https://unpkg.com/focus-visible/dist/focus-visible.js" defer></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
   </div>
 </body></html>
